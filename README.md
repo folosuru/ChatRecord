@@ -1,7 +1,6 @@
 # ChatRecord
 
-Record chat and tell commands.  
-チャットやTellコマンドを記録します。
+チャットやTellコマンドを記録します。チャットは`Plugin_data/ChatRecord/[年]/[月]/[日]/`のフォルダに`chatlog-[時].txt`の形式で保存されます。
 
 ## licence
 Copyright © 2021 folosuru folosuru(a)gmail.com  
