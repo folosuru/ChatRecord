@@ -37,13 +37,10 @@ class MainClass extends PluginBase implements Listener{
 
 	public function onPlayerCommand(PlayerCommandPreprocessEvent $event) {
 		if ($event->isCancelled()) return;
-		$message = $event->getMessage();
-		$this->getLogger()->info($message);
-		$args = explode(" ",$message);
+		$args = explode(" ",$event->getMessage());
 		$command = array_shift($args)	//	[/tell] folosuru hogehoge
 		if (strtolower($command) === "/tell" or strtolower($command === "/w" or strtolower($command) === "/msg"){
-			if (count($args) < 3 ) return;
-			$this->getLogger()->info("/tell");
+			if (count($args) < 2 ) return;
 			$player = $this->getServer()->getPlayer(array_shift($args));	//	/tell [folosuru] hogehoge
 			if($event->getPlayer() === $player) {
 				return;
@@ -53,10 +50,7 @@ class MainClass extends PluginBase implements Listener{
 		}
 		if (strtolower($command) === "/me"){
 			$this->chatlog = $this->chatlog."[".date("Y-m/d H:i:s")."]  <".$event->getPlayer()->getName()."> ".implode(" ", $args)."\n";
-		]
-
-		//$this->chatlog = $this->chatlog."[".date("Y-m/d H:i:s")."]  <".$event->getPlayer()->getName()." -> ". "> ";
-
+		}
 
 	}
 
