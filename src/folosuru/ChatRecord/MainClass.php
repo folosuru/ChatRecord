@@ -31,7 +31,7 @@ class MainClass extends PluginBase implements Listener{
 		if (!file_exists($path)) {
 			mkdir($path, 0777, true);
 		}
-		$file = $path."chatlog-" . date("H");
+		$file = $path."chatlog-" . date("H").".txt";
 		file_put_contents($file,$this->chatlog );
 	}
 
