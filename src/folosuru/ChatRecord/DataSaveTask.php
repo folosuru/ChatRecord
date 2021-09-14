@@ -22,8 +22,7 @@ class DataSaveTask extends Task{
 		if (!file_exists($path)) {
 			mkdir($path, 0777, true);
 		}
-		$file = $path."chatlog-" . date("H").".txt";
+		$file = $path."chatlog-" . date("H");
 		file_put_contents($file,$this->ChatRecord->chatlog );
-		$this->server->getLogger()->info("Auto Save completed.");
 	}
 }

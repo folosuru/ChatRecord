@@ -19,7 +19,7 @@ use pocketmine\player;
 
 class MainClass extends PluginBase implements Listener{
 
-	private $chatlog;
+
 
 	public function onLoad() : void{
 	}
